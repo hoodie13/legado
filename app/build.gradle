@@ -21,15 +21,18 @@ static def releaseTime() {
 
 def name = "legado"
 def version = "3." + releaseTime()
-def gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
+def gitCommits = 0
+try {
+    gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
+} catch (Exception ignored) {
+}
 
 android {
     compileSdk = compile_sdk_version
     namespace = 'io.legado.app'
+    
     kotlin {
-        jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
+        jvmToolchain(17)
     }
 
     signingConfigs {
@@ -124,7 +127,7 @@ android {
     }
     // 设定Room的KSP参数
     ksp {
-        arg("room.incremental", "true")
+        arg("room.incremental", "false")
         arg("room.expandProjection", "true")
         arg("room.generateKotlin", "false")
         //arg("room.schemaLocation", "$projectDir/schemas")

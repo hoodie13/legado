@@ -1,23 +1,11 @@
 @charset "utf-8";
 @import url("../Styles/fonts.css");
 body {
-    padding: 0%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    line-height: 130%;
-    text-align: justify;
-    font-family: "DK-SONGTI","st","宋体","zw",sans-serif;
 }
 
 p {
     text-align: justify;
     text-indent: 2em;
-    line-height: 130%;
-    margin-right: 0.5%;
-    margin-left: 0.5%;
-    font-family: "DK-SONGTI","st","宋体","zw",sans-serif;
 }
 p.kaiti {
     font-family: "DK-KAITI","kt","楷体","zw",serif;
@@ -38,7 +26,6 @@ span.english{
 div {
     margin: 0px;
     padding: 0px;
-    line-height: 120%;
     text-align: justify;
     font-family: "zw";
 }

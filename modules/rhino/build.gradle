@@ -8,10 +8,9 @@ plugins {
 android {
     compileSdk = compile_sdk_version
     namespace = 'com.script'
+    
     kotlin {
-        jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
+        jvmToolchain(17)
     }
     defaultConfig {
         minSdk 21

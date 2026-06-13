@@ -103,6 +103,43 @@ class ContentProcessor private constructor(
         var effectiveReplaceRules: ArrayList<ReplaceRule>? = null
         val replaceBook by lazy { book.toReplaceBook() }
         if (content != "null") {
+            if (useReplace && book.getUseReplaceRule()) {
+                //替换
+                effectiveReplaceRules = arrayListOf()
+                mContent = mContent.lines().joinToString("\n") { it.trim() }
+                getContentReplaceRules().forEach { item ->
+                    if (item.pattern.isEmpty()) {
+                        return@forEach
+                    }
+                    try {
+                        val tmp = if (item.isRegex) {
+                            mContent.replace(
+                                item.name,
+                                item.regex,
+                                item.replacement,
+                                item.getValidTimeoutMillisecond(),
+                                chapter,
+                                replaceBook
+                            )
+                        } else {
+                            mContent.replace(item.pattern, item.replacement)
+                        }
+                        if (mContent != tmp) {
+                            effectiveReplaceRules.add(item)
+                            mContent = tmp
+                        }
+                    } catch (e: RegexTimeoutException) {
+                        item.isEnabled = false
+                        appDb.replaceRuleDao.update(item)
+                        mContent = item.name + e.stackTraceStr
+                    } catch (_: CancellationException) {
+                    } catch (e: Exception) {
+                        AppLog.put("替换净化: 规则 ${item.name}替换出错.\n${mContent}", e)
+                        appCtx.toastOnUi("替换净化: 规则 ${item.name}替换出错")
+                    }
+                }
+            }
+
             //去除重复标题
             val fileName = chapter.getFileName("nr")
             if (!removeSameTitleCache.contains(fileName)) try {
@@ -152,42 +189,6 @@ class ContentProcessor private constructor(
                     val placeholder = "特殊格式的占位不应该被看见${useHtmlMap.size}。"
                     useHtmlMap[placeholder] = "\n${matchResult.value.replace("\n","")}\n"
                     placeholder
-                }
-            }
-            if (useReplace && book.getUseReplaceRule()) {
-                //替换
-                effectiveReplaceRules = arrayListOf()
-                mContent = mContent.lines().joinToString("\n") { it.trim() }
-                getContentReplaceRules().forEach { item ->
-                    if (item.pattern.isEmpty()) {
-                        return@forEach
-                    }
-                    try {
-                        val tmp = if (item.isRegex) {
-                            mContent.replace(
-                                item.name,
-                                item.regex,
-                                item.replacement,
-                                item.getValidTimeoutMillisecond(),
-                                chapter,
-                                replaceBook
-                            )
-                        } else {
-                            mContent.replace(item.pattern, item.replacement)
-                        }
-                        if (mContent != tmp) {
-                            effectiveReplaceRules.add(item)
-                            mContent = tmp
-                        }
-                    } catch (e: RegexTimeoutException) {
-                        item.isEnabled = false
-                        appDb.replaceRuleDao.update(item)
-                        mContent = item.name + e.stackTraceStr
-                    } catch (_: CancellationException) {
-                    } catch (e: Exception) {
-                        AppLog.put("替换净化: 规则 ${item.name}替换出错.\n${mContent}", e)
-                        appCtx.toastOnUi("替换净化: 规则 ${item.name}替换出错")
-                    }
                 }
             }
             useHtmlMap.forEach { (placeholder, originalContent) ->
