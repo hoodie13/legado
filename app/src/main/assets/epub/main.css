@@ -17,7 +17,7 @@ p.fangsong {
 
 span.xinli {
     font-family: "DK-KAITI","kt","楷体","zw",serif;
-    color: #4e753f;
+    //color: #4e753f;
 }
 /** 英文斜体字 **/
 span.english{
@@ -52,7 +52,7 @@ p.foot {
    font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
    font-weight: normal;
    text-indent: 0em;
-    color: #000;
+    //color: #000;
    text-align: center;
    line-height: 1.6;
 }
@@ -79,7 +79,7 @@ p.foot {
     padding: 5% 5px 0px 5px;
     text-indent: 0em;
     text-align: center;  
-    color: #000;
+    //color: #000;
     font-size: 90%;
     line-height: 1.3;
 }
@@ -96,7 +96,7 @@ p.foot {
     font-family: "DK-KAITI","kt","楷体","楷体_gb2312";
     padding: 30% 5px 5px 5px;
     text-indent: 0em;
-    color: #000;
+    //color: #000;
     text-align: center;  
     font-size: 80%;
 }
@@ -110,14 +110,14 @@ body.head {
 }
 
 body.xhead {
-    background-color: #FDF5E6;
+    //background-color: #FDF5E6;
 }
 
 h1.head {
     font-family: "DK-HEITI",黑体,sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #311a02;
+    //color: #311a02;
     text-indent: 0em;
     font-weight: normal;
     duokan-text-indent: 0em;
@@ -141,7 +141,7 @@ h1.head b {
     text-align: center;
     text-indent: 0em;
     duokan-text-indent: 0em;
-    color: #311a02;
+    //color: #311a02;
     margin: 0.5em auto;
     line-height: 140%;
 }
@@ -176,32 +176,33 @@ img.back2 {
     font-size: 0.9em;
 }
 body.head3 {
-    background-color: #a7bdcc;
-    color: #354f66;
+    //background-color: #a7bdcc;
+    //color: #354f66;
 }
 
 body.head4 {
-    background-color: #bfd19b;
-    color: #4e753f;
+    //background-color: #bfd19b;
+    ////color: #4e753f;
 }
 
 h2.head {
     font-family: "小标宋";
     text-align: left;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.4em;
     margin: 1em 2em 2em 0;
-    color: #3f83e8;
+    //color: #3f83e8;
     line-height: 140%;
 }
 
 h2.head span {
     font-family: "仿宋";
-    font-size: 0.7em;
-    background-color: #3f83e8;
+     font-weight: normal;
+    font-size: 1.1em;
+    //background-color: #3f83e8;
     border-radius: 9px;
     padding: 4px;
-    color: #fff;
+    //color: #fff;
 }
 
 
@@ -224,7 +225,7 @@ h1.head {
 	line-height:130%;
 	font-size:1.4em;
 	text-align: center;
-	color: #BA2213;
+	//color: #BA2213;
 	font-weight: bold;
 	margin-top: 2em;
 	margin-bottom: 1em;
@@ -238,7 +239,7 @@ h3 {
     border-left: 1.2em solid #00a1e9;
     line-height: 120%;
     padding-left: 3px;
-	color: #00a1e9;
+	//color: #00a1e9;
 }
 h4 {
     font-family: "DK-HEITI",黑体,sans-serif;
@@ -246,19 +247,19 @@ h4 {
 	text-align: center;
     margin: 1em 0;
     line-height: 120%;
-	color: #000;
+	//color: #000;
 }
 h1.post {
     font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
     text-align: center;
     font-size: 1.3em;
-	color: #026fca;
+	//color: #026fca;
     margin: 3em auto 2em auto;
 }
 .banquan {
     font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
     text-align: left;
-    color: #000;
+    //color: #000;
 	font-size:1.1em;
     margin-bottom:1em;
     text-indent: 1em;
@@ -286,10 +287,10 @@ p.zy {
 .mark {
     font-family: "DK-HEITI",黑体,sans-serif;
     font-size: 0.9em;
-    color: #fff;
+    //color: #fff;
     text-indent: 0em;
     duokan-text-indent: 0em;
-    background-color: maroon;
+    //background-color: maroon;
     text-align: center;
     padding: 0px;
     margin: 2em 30%;
@@ -323,7 +324,7 @@ p.duokan-image-maintitle {
     font-size: 0.9em; /*字体大小*/
     text-indent: 0; /*首行缩进为零，当你使用单标签p来指定首行缩进为2em时，记得在需要居中的文本中清除缩进，因为样式是叠加的*/
     text-align: center; /*图片说明水平居中*/
-    color: #a52a2a; /*字体颜色*/
+    //color: #a52a2a; /*字体颜色*/
     line-height: 1.25em; /*行高，防止有很长的图片说明*/
 }
 
@@ -344,10 +345,10 @@ div.description-body {
     border-radius: 0.5em;
     font-size: 0.9em;
     border-style: solid;
-    border-color: #393939;
+    //border-color: #393939;
     border-width: 0.3em;
     border-radius: 5em;
-    background-color: #5a5a5a;
+    //background-color: #5a5a5a;
     box-shadow: 2px 2px 3px #828281;
 }
 
@@ -356,12 +357,12 @@ h1.description-title {
     font-family: "黑体";
     font-size: 1.2em;
     margin: 0 0 1em 0;
-    color: #FF9;
+    //color: #FF9;
     text-shadow: 1px 1px 0 black;
 }
 
 p.description-text {
-    color: #f9ddd2;
+    //color: #f9ddd2;
     font-family: "准圆";
     margin: 0;
     text-align: justify;
@@ -372,7 +373,7 @@ p.description-text {
 hr.description-hr {
     margin: 0.5em -1em;
     border-style: dotted;
-    border-color: #9C9;
+    //border-color: #9C9;
     border-width: 0.05em 0 0 0;
 }
 
@@ -382,7 +383,7 @@ p.tips {
     duokan-text-indent: 0;
     font-family: "楷体";
     font-size: 0.7em;
-    color: #FFC;
+    //color: #FFC;
     margin: 0;
 }
 
@@ -391,7 +392,7 @@ p.tips {
     font-family: "DK-CODE","DK-XIHEITI",细黑体,"xihei",sans-serif;
 	font-weight: bold;
     font-size: 100%;
-    color: #000;
+    //color: #000;
     margin: 1em 0 1em 0;
     text-align: center;
 }
@@ -423,7 +424,7 @@ p.tips {
 .vernote {
     font-family: "DK-FANGSONG",仿宋,"fs","fangsong",sans-serif;
     font-size: 75%;
-    color: #686d70;
+    //color: #686d70;
     text-indent: 0em;
     text-align: left;
     duokan-text-indent: 0em;
@@ -438,7 +439,7 @@ p.tips {
 .entry {
     margin-left: 18px;
     font-size: 83%;
-    color: #8fe0a3;
+    //color: #8fe0a3;
     text-indent: 0em;
     duokan-text-indent: 0em;
 }
@@ -448,7 +449,7 @@ p.tips {
     text-align: center;
     padding: 0.8em;
     margin: 0 auto 3px auto;
-    color: #000;
+    //color: #000;
     font-family: "方正小标宋_GBK","DK-XIAOBIAOSONG";
     font-size: 130%;
     text-shadow: none;
@@ -456,7 +457,7 @@ p.tips {
 
 .cp {
     font-family: "DK-CODE","DK-XIHEITI",细黑体,"xihei",sans-serif;
-    color: #412938;
+    //color: #412938;
     font-size: 70%;
     text-align: left;
     text-indent: 0em;
@@ -488,7 +489,7 @@ ol {
 	margin:2em 0 0 0.5em;
 	padding:0;
 	height:2px;
-	background-color: #F3221D;
+	//background-color: #F3221D;
 }
 
 .duokan-footnote-content{
@@ -502,7 +503,7 @@ ol {
 	font-size: 80%;
 	line-height: 100%;
 	clear: both;
-	color:#000;
+	//color:#000;
 	list-style-type:decimal;
 }
 
@@ -512,7 +513,7 @@ li.duokan-footnote-item a {
 }
 a{
 	text-decoration: none;
-	color: #222;
+	//color: #222;
 }
 
 a:hover {background: #81caf9}	
@@ -523,7 +524,7 @@ a:active {background: yellow}
 	text-indent: 0em;
 	duokan-text-indent: 0em;
 	font-size:90%;
-	color: #1F4150;
+	//color: #1F4150;
 	margin-top: 1em;
 }
 
@@ -533,6 +534,6 @@ a:active {background: yellow}
 	text-indent: 0em;
 	duokan-text-indent: 0em;
 	font-size:70%;
-	color: #3A3348;
+	//color: #3A3348;
 	margin-top: 1em;
 }
